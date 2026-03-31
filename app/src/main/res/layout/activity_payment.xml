@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Scrollable content area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_title"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Contact Information Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_text"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_text"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Item Header with Discount Badge -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_title"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discount_label"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/discount_badge_bg"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- Item Details Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <!-- Car Image (circular) -->
+                <ImageView
+                    android:id="@+id/item_car_image"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Car"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Car Name -->
+                <TextView
+                    android:id="@+id/item_car_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_text" />
+
+                <!-- Original Price -->
+                <TextView
+                    android:id="@+id/item_car_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+            </LinearLayout>
+
+            <!-- Shipping Options Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipping_options"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Standard Shipping Option -->
+            <LinearLayout
+                android:id="@+id/option_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/shipping_option_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:id="@+id/radio_standard"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/radio_unselected"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/standard"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+            </LinearLayout>
+
+            <!-- Express Shipping Option -->
+            <LinearLayout
+                android:id="@+id/option_express"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/shipping_option_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:id="@+id/radio_express"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/radio_unselected"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/express"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/express_price"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+            </LinearLayout>
+
+            <!-- Delivery date text -->
+            <TextView
+                android:id="@+id/delivery_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Bar with Total and Pay Button -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <!-- Total Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_label"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text" />
+        </LinearLayout>
+
+        <!-- Pay Button -->
+        <TextView
+            android:id="@+id/btn_pay"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="@string/pay"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</RelativeLayout>

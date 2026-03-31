@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer light circle (shadow effect) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E8ECFE" />
+            <size
+                android:width="120dp"
+                android:height="120dp" />
+        </shape>
+    </item>
+    <!-- Inner blue circle -->
+    <item
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="16dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/primary_blue" />
+            <size
+                android:width="88dp"
+                android:height="88dp" />
+        </shape>
+    </item>
+</layer-list>
