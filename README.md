@@ -10,9 +10,11 @@ Android application for browsing and purchasing luxury cars, built with Kotlin.
 
 ## Demo
 
-| Shop | Payment | Confirmation |
-|------|---------|--------------|
-| ![Shop](img/screen1.png) | ![Payment](img/screen2.png) | ![Confirmation](img/screen3.png) |
+<p>
+  <img src="img/screen1.png" width="250" alt="Shop" />
+  <img src="img/screen2.png" width="250" alt="Payment" />
+  <img src="img/screen3.png" width="250" alt="Confirmation" />
+</p>
 
 ## Cars Available
 
