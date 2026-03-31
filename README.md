@@ -8,6 +8,12 @@ Android application for browsing and purchasing luxury cars, built with Kotlin.
 - **Payment & Calculation** — 5% automatic discount, Standard (free) or Express (+$1,700) shipping
 - **Order Confirmation** — success screen with navigation back to shop
 
+## Demo
+
+| Shop | Payment | Confirmation |
+|------|---------|--------------|
+| ![Shop](img/screen1.png) | ![Payment](img/screen2.png) | ![Confirmation](img/screen3.png) |
+
 ## Cars Available
 
 | Car | Price |
