@@ -8,6 +8,7 @@
     <color name="light_gray">#F5F5F5</color>
     <color name="card_background">#FFFFFF</color>
     <color name="background">#FAFAFA</color>
+    <color name="ic_launcher_background">#3655F4</color>
     <color name="shipping_selected_bg">#E8ECFE</color>
     <color name="button_dark">#1A1A1A</color>
 </resources>
